@@ -10,8 +10,14 @@ module DestinyApi
     end
 
     def get(endpoint)
-      raise 'Missing API Key. Please be sure to set this using the gems configuration.' if DestinyApi.configuration.api_key.nil?
+      raise 'Missing API Key. Please be sure to set this using the gems configuration.' if api_key.nil?
       @client.get(BASE_URL + endpoint, nil, "X-API-KEY" => DestinyApi.configuration.api_key )
+    end
+
+  private
+
+    def api_key
+      ENV['DESTINY_API_KEY'] || DestinyApi.configuration.api_key
     end
   end
 end

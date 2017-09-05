@@ -13,5 +13,10 @@ describe DestinyApi::Client do
       expect(http_client).to receive(:get).with(base_url + endpoint, nil, 'X-API-KEY' => 'foo')
       subject.get(endpoint)
     end
+
+    it 'should raise an error if no api_key is set' do
+      allow(subject).to receive(:api_key).and_return(nil)
+      expect{ subject.get(endpoint) }.to raise_error('Missing API Key. Please be sure to set this using the gems configuration.')
+    end
   end
 end
