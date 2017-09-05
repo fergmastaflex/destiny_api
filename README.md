@@ -1,8 +1,10 @@
 # DestinyApi
 
-TODO: Write a gem description
+This a ruby client for the Destiny 2 API.
 
 ## Installation
+
+**THIS ISN'T QUITE ON RUBY GEMS YET**
 
 Add this line to your application's Gemfile:
 
