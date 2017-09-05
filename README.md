@@ -28,9 +28,15 @@ Somewhere in your app, you'll need to configure this gem with the API key bungie
 
 ```
   DestinyApi.configure do |config|
-    config.api_key = YOUR_API_KEY
+    config.api_key = 'your_api_key'
   end
 ```
+
+**Alternatively**, you can also set an environment variable.
+
+```
+  DESTINY_API_KEY = 'your_api_key'
+``
 
 ## Contributing
 
