@@ -18,9 +18,17 @@ Or install it yourself as:
 
     $ gem install destiny_api
 
-## Usage
+## Configuration
 
-TODO: Write usage instructions here
+Somewhere in your app, you'll need to configure this gem with the API key bungie provided to you.
+
+**If you do not have an API key, you can get one at Bungie's application page** https://www.bungie.net/en/Application
+
+```
+  DestinyApi.configure do |config|
+    config.api_key = YOUR_API_KEY
+  end
+```
 
 ## Contributing
 
