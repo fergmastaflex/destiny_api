@@ -36,7 +36,7 @@ Somewhere in your app, you'll need to configure this gem with the API key bungie
 
 ```
   DESTINY_API_KEY = 'your_api_key'
-``
+```
 
 ## Contributing
 
